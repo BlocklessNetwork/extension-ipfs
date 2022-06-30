@@ -1,0 +1,18 @@
+[package]
+name = "blockless-ipfs-driver"
+version = "0.1.0"
+authors = ["Join.G"]
+description = "blockless ipfs driver"
+keywords = ["blockless", "ipfs", "driver"]
+readme = "README.md"
+edition = "2021"
+
+
+[dependencies]
+reqwest = "0.11"
+json = {version = "0.12.4"}
+tokio = {version = "1", features = ["rt", "time", "net"], optional = true}
+
+[feature]
+default = []
+runtime = ["tokio"]
